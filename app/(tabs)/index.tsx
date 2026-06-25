@@ -1,10 +1,14 @@
 import '@/global.css';
+import { styled } from "nativewind";
 import { Link } from 'expo-router';
 import { Text, View } from "react-native";
+import { SafeAreaView as RawSafeAreaView } from 'react-native-safe-area-context';
 
-export default function Index() {
+const SafeAreaView = styled(RawSafeAreaView);
+
+export default function App() {
   return (
-    <View className='flex-1 items-center justify-center bg-background'>
+    <SafeAreaView className='flex-1 bg-background p-5'>
       <Text className='text-xl font-bold text-success'>
         Ceci est un test.
       </Text>
@@ -14,11 +18,11 @@ export default function Index() {
     
     
       <Link href={{
-        pathname: "/subscriptions/[id]",
+        pathname: '/subscriptions/[id]',
         params: {id:"vegner"}
       }}>Vegner Subscription</Link>
     
     
-    </View>
+    </SafeAreaView>
   );
 }
