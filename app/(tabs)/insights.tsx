@@ -1,5 +1,4 @@
-import { View,Text } from 'react-native'
-import { Link } from 'expo-router'
+import { Text } from 'react-native'
 import { styled } from "nativewind"
 import { SafeAreaView as RawSafeAreaView } from 'react-native-safe-area-context';
 
