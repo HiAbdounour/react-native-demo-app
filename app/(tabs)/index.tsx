@@ -8,6 +8,7 @@ import { HOME_BALANCE, HOME_USER } from '@/constants/data';
 import { icons } from '@/constants/icon';
 import { formatCurrency } from '@/lib/USD';
 import dayjs from 'dayjs';
+import ListHeading from '../components/listHeading';
 
 const SafeAreaView = styled(RawSafeAreaView);
 
@@ -29,6 +30,14 @@ export default function App() {
           <Text className='home-balance-amount'>{formatCurrency(HOME_BALANCE.amount)}</Text>
           <Text className='home-balance-date'>{dayjs(HOME_BALANCE.nextRenewalDate).format('MM/DD')}</Text>
         </View>
+      </View>
+
+      <View>
+        <ListHeading title='Upcoming'/>
+      </View>
+
+      <View>
+        <ListHeading title='All Subscriptions'/>
       </View>
     </SafeAreaView>
   );
