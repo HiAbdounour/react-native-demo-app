@@ -1,0 +1,11 @@
+NEED A DEV ACCOUNT => Apple &/| GooglePlay
+
+npm install -g eas-cli :: installer globalement EAS CLI
+eas login :: se connecter à EAS
+eas build:configure :: créer un fichier de configuration eas.json pour les cibles (iOS et Android)
+=> vérifier que tout est OK dans expo (?.json)
+=> en particulier, ajouter un bundleIdentifier (iOS) et un package (Android) :: ce sont les IDs de l'app dans les stores
+[POUR iOS] eas build --platform ios --profile production
+[POUR Android] eas build --platform android --profile prod
+[POUR BOTH] eas build --platform all --profile production
+eas submit --platform {ios (OU) android}
