@@ -3,6 +3,7 @@ import {SafeAreaView as RNSafeAreaView} from "react-native-safe-area-context";
 import { styled } from "nativewind";
 import { useState } from "react";
 import SubscriptionCard from '../components/subscriptionCard';
+import { useSubscriptionStore } from '@/lib/subscriptionStore';
 
 const SafeAreaView = styled(RNSafeAreaView);
 
