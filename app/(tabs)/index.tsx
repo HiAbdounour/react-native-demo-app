@@ -57,13 +57,27 @@ export default function App() {
 
       <View>
         <ListHeading title='All Subscriptions'/>
-        <SubscriptionCard
-          {...HOME_SUBSCRIPTIONS[0]}
-          expanded={expandedId===HOME_SUBSCRIPTIONS[0].id}
-          onPress={()=>setExpandedId((currentId)=>(
-            currentId===HOME_SUBSCRIPTIONS[0].id ? null : HOME_SUBSCRIPTIONS[0].id
-          ))}
-        />
+        <FlatList
+            data={HOME_SUBSCRIPTIONS}
+            renderItem={({ item })=>(
+              <SubscriptionCard
+                {...item}
+                expanded={expandedId===item.id}
+                onPress={()=>setExpandedId((currentId)=>(
+                  currentId===item.id ? null : item.id
+                ))}
+              />
+            )}
+            keyExtractor={(item)=>item.id}
+            extraData={expandedId}
+            ItemSeparatorComponent={() => <View className='h-4'/>}
+            showsVerticalScrollIndicator={false}
+            ListEmptyComponent={
+            <Text className='home-empty-state'>
+              No subscriptions yet !
+            </Text>
+          }
+          />
       </View>
     </SafeAreaView>
   );
