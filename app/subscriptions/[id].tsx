@@ -12,3 +12,5 @@ const SubscriptionDetails = () => {
 }
 
 export default SubscriptionDetails
+
+// REMEMBER SCROLLVIEW
