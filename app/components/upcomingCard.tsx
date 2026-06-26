@@ -1,7 +1,7 @@
 import { formatCurrency } from "@/lib/USD"
 import { View,Text,Image } from "react-native"
 
-function UpcomingCard({ data:{ name,price,daysLeft,icon,currency } }:UpcomingSubscriptionCardProps){
+function UpcomingCard({ name,price,daysLeft,icon,currency }:UpcomingSubscription){
 
     return(
         <View className="upcoming-card">
